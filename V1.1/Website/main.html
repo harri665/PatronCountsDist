@@ -3,12 +3,13 @@
 <head> 
     <title>Patron Counts (Digiquatics v2) </title>
 </head>
-<body>
+<body onload = "runMain()">
 
     <input id = "date" type = "date"> 
     <button type = "button" onclick="RunProgram()">Submit</button>
-    <a href="main.html">RELOAD/NEW</a>
-
+    <a href="main.html">RELOAD/NEW/Change</a>
+    <button type = "button" onclick="CloseProgram()">End/Close</button>
+    <a href = "seetup.html">Setup</a>
     <ul id = "div1"> </ul>
     <ul id = "div2"> </ul>
     <div class="container">
@@ -85,6 +86,9 @@
 </style>
 <script type="text/javascript" src="/eel.js"></script>
 <script>
+    //Lap Swim 
+    //Spectators
+    //Adult Swim/River
     var LWeekday = ["5:00AM","6:00AM","7:00AM","8:00AM","9:00AM","10:00AM","11:00AM","12:00AM","1:00PM","2:00PM","2:00PM","3:00PM","3:00PM","4:00PM","4:00PM","4:00PM","5:00PM","5:00PM","6:00PM","6:00PM","6:00PM","7:00PM","7:00PM","7:00PM","8:00PM","8:00PM",]
     var AWeekday = ["5:00AM","6:00AM","7:00AM","8:00AM","9:00AM","9:00AM","9:00AM","10:00AM","10:00AM","10:00AM","11:00AM","11:00AM","12:00PM","12:00PM","1:00PM","1:00PM","2:00PM","2:00PM","3:00PM","3:00PM","4:00PM","4:00PM","4:00PM","5:00PM","5:00PM","6:00PM","6:00PM","6:00PM","7:00PM","7:00PM","8:00PM","8:00PM",]
     var LFriday = ["5:00AM ","6:00AM ","7:00AM ","8:00AM ","9:00AM ","10:00AM ","11:00AM ","12:00PM ","1:00PM ","2:00PM ","2:00PM ","3:00PM ","3:00PM ","4:00PM ","4:00PM ","5:00PM ","5:00PM ","6:00PM ","6:00PM ","7:00PM ","7:00PM ",]
@@ -93,6 +97,17 @@
     var AWeekend = ["8:00AM","9:00AM","10:00AM","10:00AM","10:00AM","11:00AM","11:00AM","12:00PM","12:00PM","1:00PM","1:00PM","2:00PM","2:00PM","3:00PM","3:00PM","4:00PM","4:00PM",]
     var LapCount = 0; 
     var ActCount =0; 
+    function LoadMainPage() {
+        window.location = "main.html"
+    }
+    function LoadSetupPage() {
+        window.location = "seetup.html"
+    }
+    eel.expose(LoadMainPage)
+    eel.expose(LoadSetupPage)
+    function runMain() {
+        eel.Start(); 
+    }
     function RunProgram() {
         var DateIn =  document.getElementById("date").value; 
         var DayofWekk = new Date(DateIn).getDay(); 
@@ -134,6 +149,10 @@
             ActCount = 17;   
         }
 
+    }
+    function CloseProgram() {
+        eel.EndProgram(); 
+        close(); 
     }
 
     function CreateInputs(LapIn, ActIn) {
