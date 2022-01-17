@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src = "home.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+<head> 
+    <title>Home  </title>
+</head> 
+<body onload = "Setup()">
+    <ul class = "NavBar">
+        <li class = "NavEle">
+            <a href = "PatronCheck.html">PatronCheck</a>
+        </li>
+        <li class = "NavEle">
+            <a href = "ChemCheck.html">ChemCheck</a>
+        </li>
+        <li class = "NavEle">
+            <a href = "seetup.html">Setup</a>
+        </li>
+        <li class = "NavEle">
+            <select id = "RecCenterSel" name = "RecCenter" onclick="ClickSelect()">
+                <option value = "none">Select Pool</option>
+                <option value = "Central">Central Park Rec</option>
+                <option value = "Carla">Carla Madision</option>
+            </select>
+        </li>
+
+        
+        
+    </ul>
+    <button id = "instructions" onclick="OpenInstruction()">Instructions</button>
+    <button onclick = "CallAddModalOver()" id = "UpdateLog">Update Log</button>
+    <div class = "InstructionsModal" id = "InstructionsModal">
+        <button id = "close" onclick = "CloseInstModal()">CLOSE</button>
+        <h1>
+            Instructions
+        </h1>
+        <ul style = "list-style:upper-alpha;">
+            <li>
+                <p>Put Digiquatics login information into setup page</p>
+            </li>
+            <li>
+                <p>Click Set (if you put the info in wrong you can always click setup again and change it)</p>
+            </li>
+            <li>
+                <p>Select Pool from select pool dropdown</p>
+            </li>
+            <li>
+                <p>Click either Patron or Chem Check </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

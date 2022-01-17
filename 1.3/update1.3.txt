@@ -1,0 +1,31 @@
+1.3
+Make Everything Work and Look nice :) 
+FIXED - EEL having error causing it to not work properly 
+FIXED - an issue where switching pages in the gui causes program crash
+FIXED - an issue where the update was slow and didnt update properly 
+FIXED - Issue Where program wasnt "Armed" 
+FIXED - Setup Screen only being shown in Patron Counts and not Home
+FIXED - Save on Setup.html not sending you back to home.html
+FIXED - Back button on Setup sending you to patron counts now sends you to home 
+FIXED - link on update modal not working 
+FIXED - times and <inputs> not lining 
+FIXED - bug where excel lines would be in the clear function 
+ADDED - Current Change logs Load 
+ADDED - Update Model 
+ADDED - Made everything look nice 
+ADDED - Formating to Patron Counts 
+ADDED - Formating to Home 
+ADDED - Top nav bar 
+ADDED - Update logs button to HOME 
+ADDED - Clean up code - imporved performance and imporoved readability 
+ADDED - Added setup button to home 
+ADDED - Clear to Check Chem 
+ADDED - Drop down for multiple pools 
+ADDED - Placeholder in CHem Check 
+ADDED - style to Setup 
+ADDED - Instructions to home
+ADDED - ERROR to Chem check 
+ADDED - Reload Button Galore 
+ADDED - Show Added points in chem 
+ADDED - Load Pool from last session 
+REMOVED - Digiquatics V2 joke
