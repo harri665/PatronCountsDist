@@ -1,0 +1,8 @@
+1.2
+Bug Fixes and Update Alert system
+FIXED - 11 AM was defaulting to 11PM 
+FIXED - Code didnt work when multiple Rec Centers were added 
+FIXED - Issue where Code wouldn't enter info correctly because it need to wait for website 
+ADDED - UPDATE system 
+ADDED - Home page 
+ADDED - CHem Check basics (Needs more work) 

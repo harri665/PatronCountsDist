@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/eel.js"></script>
+<script src = "PatronCheck.js"></script>
+<link rel="stylesheet" href="stylesheet.css">
+<html>
+<head> 
+    <title>Patron Counts (Digiquatics v2) </title>
+</head> 
+<body onload = "Setup()">
+    <ul class = "NavBar">
+        <li class = "NavEle">
+            <a href = "home.html">HOME</a>
+        </li>
+        <li style="color:red; " class = "NavEle" >
+            <button type = "button" onclick="CloseProgram()">End/Close</button>
+        </li>
+        <li class = "NavEle">
+            <a href = "seetup.html">Setup</a> 
+        </li>
+
+    </ul>
+
+    <ul class = "PatronSetup" id = "PatronSetupSt">
+        <li class = "NavEle">
+            <input id = "date" type = "date"> 
+        </li>
+        <li class = "NavEle">
+            <button type = "button" onclick="RunProgram()">Submit</button>
+        </li>
+        <li class = "NavEle">
+            <a href="PatronCheck.html">RELOAD/NEW/Change</a>
+        </li>
+        <li class = "NavEle" id = "RunButton">
+
+        </li>
+    </ul>
+    
+    
+    
+    
+    
+    
+    <div class = "Patron_Lap_Act">
+        <ul id = "PatronLap"> </ul>
+        <ul id = "PatronAct"> </ul>
+    </div>
+
+</body>
+
+</html>
