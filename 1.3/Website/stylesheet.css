@@ -64,6 +64,7 @@ input:focus{
     border: 2px solid rgb(0, 68, 85);
     padding:0; 
     width:100%; 
+    overflow-y:auto;
 }
 .Patron_Lap_Act {
     display: block;
