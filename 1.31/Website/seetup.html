@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src = "setup.js"></script>
+    <script src = "All.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">   
+<head> 
+    <title>Patron Counts (Digiquatics v2) Setup  </title>
+</head>
+<body onload = "Setup()"> 
+    <div class = "cover" id = "LoadCover"></div>
+    <ul class = "NavBar">
+        <li class = "NavEle">
+            <a href = "home.html">BACK</a>
+        </li>
+    </ul>
+    <h1 style = "
+    background-color: var(--SecondaryColor);
+    padding:10px; 
+    color:var(--TextColor); 
+    ">Please input your Digiquatics login to continue </h1>
+    <div class = "SetupMain">
+        <p>USERNAME</p>
+        <input id = "username" type = "text" placeholder="USERNAME">
+        <p>PASSOWRD</p>
+        <input id = "password" type = "password" placeholder="PASSWORD">
+        <button onclick="Save()">Set</button>
+    </div>
+</body>
+</html>
+

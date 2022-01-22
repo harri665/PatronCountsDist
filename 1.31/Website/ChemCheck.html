@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/eel.js"></script>
+<script src = "CheckChem.js"></script>
+<script src = "All.js"></script>
+<link rel="stylesheet" href="stylesheet.css">
+<html>
+
+<head> 
+    <title>ChemCheck (Digiquatics v2)  </title>
+</head>
+<body onload="Setup()">
+    <div class = "cover" id = "LoadCover">
+        <p id = "Loading">LOADING...</p>
+
+    </div>
+    
+    <ul class = "NavBar">
+        <li class = "NavEle">
+            <a href = "home.html">HOME</a>
+        </li>
+        <li style="color:red; " class = "NavEle" >
+            <button type = "button" onclick="CloseProgram()">End/Close</button>
+        </li>
+        <li class = "NavEle">
+            <a href = "seetup.html">Setup</a> 
+        </li>
+    </ul>
+    <ul class = "ChemSetup">
+        <li class = "NavEle">
+            <input type = "date" id = "Date"> 
+        </li>
+        <li class = "NavEle">
+            <label>Lap</label>
+            <input type = "radio" id = "Lapinput" name ="pool" value = "LapSel" onclick="SelLap()" class = "radio">
+        </li>
+        <li class = "NavEle">
+            <label>Act</label>
+            <input type = "radio" id = "Actinput" name = "pool" value = "ActSel" onclick="SelAct()" class = "radio">
+        </li>
+        <li class = "NavEle">
+            <button onclick="ClearALL()">Clear</button>
+        </li>
+        <li class = "NavEle">
+            <button onclick = "ReloadClear()">Reload/ClearAll</button>
+        </li>
+        <li class = "NavEle">
+            <button onclick="RunChem()" id = "SUBMITALL">SubmitDay</button> 
+        </li>
+    </ul>
+    
+    
+
+<div style = "width:100%; height:50px;">
+<button id = "upload" onclick = "UploadtoDigi()">UPLOAD TO DIGI!</button>
+</div>
+    
+    
+<div class = "ChemIn">
+    <ul id = "mainChemIn">
+
+        <ul id = LableCol>
+            <li class = "Name" id = "Name">
+                <p style = "padding-bottom: 15px; font-weight: 900;">NAME</p>
+            </li>
+            <li>
+                <p>Open</p>
+            </li>
+            <li>
+                <p>10:30</p>
+            </li>
+            <li>
+                <p>12:30</p>
+            </li>
+            <li>
+                <p>2:30</p>
+            </li>
+            <li>
+                <p>4:30</p>
+            </li>
+            <li>
+                <p>Close</p>
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>CL</p>
+            </li>
+            <li>
+                <input id = "CL1" placeholder="CL">
+            </li>
+            <li>
+                <input id = "CL2" placeholder="CL">
+            </li>
+            <li>
+                <input id = "CL3" placeholder="CL">
+            </li>
+            <li>
+                <input id = "CL4" placeholder="CL">
+            </li>
+            <li>
+                <input id = "CL5" placeholder="CL">
+            </li>
+            <li>
+                <input id = "CL6" placeholder="CL">
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>ORP</p>
+            </li>
+            <li>
+                <input id = "ORP1" placeholder="ORP">
+            </li>
+            <li>
+                <input id = "ORP2" placeholder="ORP">
+            </li>
+            <li>
+                <input id = "ORP3" placeholder="ORP">
+            </li>
+            <li>
+                <input id = "ORP4" placeholder="ORP">
+            </li>
+            <li>
+                <input id = "ORP5" placeholder="ORP">
+            </li>
+            <li>
+                <input id = "ORP6" placeholder="ORP">
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>PH</p>
+            </li>
+            <li>
+                <input id = "PH1" placeholder="PH">
+            </li>
+            <li>
+                <input id = "PH2" placeholder="PH">
+            </li>
+            <li>
+                <input id = "PH3" placeholder="PH">
+            </li>
+            <li>
+                <input id = "PH4" placeholder="PH">
+            </li>
+            <li>
+                <input id = "PH5" placeholder="PH">
+            </li>
+            <li>
+                <input id = "PH6" placeholder="PH">
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>TA</p>
+            </li>
+            <li>
+                <input id = "TA1" placeholder="TA">
+            </li>
+            <li>
+                <input id = "TA2" placeholder="TA">
+            </li>
+            <li>
+                <input id = "TA3" placeholder="TA">
+            </li>
+            <li>
+                <input id = "TA4" placeholder="TA">
+            </li>
+            <li>
+                <input id = "TA5" placeholder="TA">
+            </li>
+            <li>
+                <input id = "TA6" placeholder="TA">
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>FLOW</p>
+            </li>
+            <li>
+                <input id = "FLOW1" placeholder="FLOW">
+            </li>
+            <li>
+                <input id = "FLOW2" placeholder="FLOW">
+            </li>
+            <li>
+                <input id = "FLOW3" placeholder="FLOW">
+            </li>
+            <li>
+                <input id = "FLOW4" placeholder="FLOW">
+            </li>
+            <li>
+                <input id = "FLOW5" placeholder="FLOW">
+            </li>
+            <li>
+                <input id = "FLOW6" placeholder="FLOW">
+            </li>
+        </ul>
+        <ul>
+            <li class = "Name">
+                <p>TEMP</p>
+            </li>
+            <li>
+                <input id = "TEMP1" placeholder="TEMP">
+            </li>
+            <li>
+                <input id = "TEMP2" placeholder="TEMP">
+            </li>
+            <li>
+                <input id = "TEMP3" placeholder="TEMP">
+            </li>
+            <li>
+                <input id = "TEMP4" placeholder="TEMP">
+            </li>
+            <li>
+                <input id = "TEMP5" placeholder="TEMP">
+            </li>
+            <li>
+                <input id = "TEMP6" placeholder="TEMP">
+            </li>
+        </ul>
+    <ul>
+        <li class = "Name">
+            <p>INITIALS</p>
+        </li>
+        <li>
+            <input id = "INITIALS1" placeholder="INITIALS">
+        </li>
+        <li>
+            <input id = "INITIALS2" placeholder="INITIALS">
+        </li>
+        <li>
+            <input id = "INITIALS3" placeholder="INITIALS">
+        </li>
+        <li>
+            <input id = "INITIALS4" placeholder="INITIALS">
+        </li>
+        <li>
+            <input id = "INITIALS5" placeholder="INITIALS">
+        </li>
+        <li>
+            <input id = "INITIALS6" placeholder="INITIALS">
+        </li>
+    </ul>
+        
+
+    </ul>
+</div>
+<div id ="errorholder" style ="background-color: var(--ErrorColor); width: 100%; text-align: center;">
+<p id = "error"></p>
+</div>
+<div class = "ChemShow" id = "ActChem">
+    <p class = "ChemShowName">Activity</p>
+    <table id = "ActChemList">
+        <tr class = "line1">
+            <th>Time</th>
+            <th>CL</th>
+            <th>ORP</th>
+            <th>PH</th>
+            <th>TA</th>
+            <th>FLOW</th>
+            <th>TEMP</th>
+            <th>Initials</th>
+        </tr>
+    </table>
+</div>
+<div class = "ChemShow" id = "LapChem">
+    <p class = "ChemShowName">Lap</p>
+    <table id = "LapChemList">
+        <tr class = "line1">
+            <th>Time</th>
+            <th>CL</th>
+            <th>ORP</th>
+            <th>PH</th>
+            <th>TA</th>
+            <th>FLOW</th>
+            <th>TEMP</th>
+            <th>Initials</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+
