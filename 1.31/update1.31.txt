@@ -1,0 +1,34 @@
+1.31
+MORE STUFF just waiting to get 1.4 ! 
+FIXED - issue where if too many logs there would be no scroll 
+FIXED - issue where going to fast in program would cause de sync between eel and python 
+FIXED - issue where program would randomly crash due to eel sync 
+FIXED - program cant que request and would cause lag between requets or crash with no error message 
+FIXED - clear on Chem Check page now actually clears 
+FIXED - if you clicked to fast after loading thr program would crash 
+FIXED - Issue Where loading chem check can submit before its actually uploaded ! 
+Fixed - Close on Popup now works as intended 
+FIXED - github link being wierd color now is blue for maximum visibility 
+FIXED - Update title looked like it was a update point this is no longer the case 
+FIXED - Logs are now actaully readable and not just  hodgepoge of random stuff 
+ADDED - Report Bug button on home page 
+ADDED - Loading Screen and Running screens 
+ADDED - Consistent rgb control for everything ! 
+ADDED - Runs now report if they finish its no longer a guessing game !!!
+ADDED - Ability to Display Errors ! 
+ADDED - Ability to display pertinet information based off a online source Can be used to display found bugs or any other important imformation 
+ADDED - Pertinet information is now Based on Version so diffrent info can be displayed for diffrent versions
+ADDED - Display Screen to display information 
+ADDED - Chem will now show running 
+ADDED - Clear Chem now display sucess 
+ADDED - Patron count now will show when you are running 
+ADDED - Patron will now display sucess! 
+ADDED - styling to Report button its not longer a "bad" looking button 
+ADDED - Basic settings page 
+ADDED - Ability to arm the program during runtime ! ( needs to be used with caution !)
+ADDED - ability to scrool though all changes in Update log 
+ADDED - A whole mess of easter eggs :) 
+REMOVED - excel sheet no longer clears when you load Chem check page (may need change?)
+CHANGE - when hitting tab on Chem Checks it not goes down instead of across should help in speed of input !
+CHANGE - UI of Chem Check is better ... 
+CHANGE - UI of Patron Check is better... 
